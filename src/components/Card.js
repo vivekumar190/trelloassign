@@ -23,24 +23,8 @@ const CardTitle = styled.div`
   font-size: 14px;
 `;
 
-const DueDate = styled.div`
-  font-size: 12px;
-  color: ${props => props.isOverdue ? '#eb5a46' : '#5e6c84'};
-  margin-top: 4px;
-`;
-
 const Card = ({ card, index, listId, lists, setLists }) => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-
-  const formatDate = (date) => {
-    if (!date) return null;
-    return new Date(date).toLocaleDateString();
-  };
-
-  const isOverdue = (date) => {
-    if (!date) return false;
-    return new Date(date) < new Date();
-  };
 
   const getPriorityColor = (priority) => {
     switch (priority) {
@@ -81,11 +65,6 @@ const Card = ({ card, index, listId, lists, setLists }) => {
               >
                 {card.priority.charAt(0).toUpperCase() + card.priority.slice(1)}
               </div>
-            )}
-            {card.dueDate && (
-              <DueDate isOverdue={isOverdue(card.dueDate)}>
-                Due: {formatDate(card.dueDate)}
-              </DueDate>
             )}
           </CardContainer>
         )}

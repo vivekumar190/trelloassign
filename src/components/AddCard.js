@@ -37,7 +37,7 @@ const AddCard = ({ listId, lists, setLists }) => {
         id: uuidv4(),
         title: formData.title.trim(),
         description: formData.description.trim(),
-        priority: formData.priority,
+        priority: formData.priority || 'medium',
         dueDate: null
       };
 
