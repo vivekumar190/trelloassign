@@ -1,0 +1,42 @@
+.list-container {
+  background-color: #ebecf0;
+  border-radius: 3px;
+  width: 272px;
+  padding: 8px;
+  height: fit-content;
+  max-height: calc(100% - 16px);
+  display: flex;
+  flex-direction: column;
+}
+
+.list-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 8px;
+}
+
+.list-title {
+  font-size: 14px;
+  font-weight: bold;
+  margin: 0;
+}
+
+.delete-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #6b778c;
+  padding: 4px;
+  border-radius: 3px;
+}
+
+.delete-button:hover {
+  background-color: #dadbe2;
+}
+
+.cards-container {
+  flex-grow: 1;
+  overflow-y: auto;
+  min-height: 1px;
+} 

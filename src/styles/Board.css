@@ -1,0 +1,14 @@
+.board-container {
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-x: auto;
+  background-color: #0079bf;
+}
+
+.lists-container {
+  display: inline-flex;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  height: calc(100% - 2rem);
+  /* overflow-y: auto; */
+} 
